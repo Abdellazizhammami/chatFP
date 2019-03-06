@@ -1,0 +1,18 @@
+
+<ul class="list-group">
+
+  <div *ngFor="let user of users; index as k">
+
+<li class="list-group-item list-group-item-info " style=  " display: flex; margin-bottom : 2rem !important ;"> 
+   
+<div style="justify-content:center">
+  <p >{{user.name}} {{user.lastname}}</p>
+</div>
+<div class="float-right">
+   <button type="button" class="btn btn-dark  .active"  (click)=chat(user._id) >start chat</button>
+   
+  </div>
+  </li>
+
+</div>
+</ul> 

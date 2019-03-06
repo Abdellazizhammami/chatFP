@@ -1,0 +1,54 @@
+<!-- Page Content -->
+<!--haka lazmou yji-->
+<div class="container">
+
+
+
+
+  <!-- Comments Form -->
+
+  <h5>Leave a Comment:</h5>
+  <form>
+
+    <textarea class="form-control" rows="3" type="text" name="corpssss" [(ngModel)]="mes.corps" placeholder="add comment"
+      [value]="textarea"></textarea>
+
+    <button type="submit" class="btn btn-primary btn-md float-right" (click)="submit()">send</button>
+  </form>
+  <ul class="list-group">
+    <div *ngFor="let mess of messages, index as k">
+      <li class="list-group-item list-group-item-info">
+        <div class="media mb-4">
+
+          <div class="media-body">
+            <h5 class="mt-0">Sender : {{mess.sender.name}} {{mess.sender.lastname}}</h5>
+            <h5 class="mt-0">Receiver : {{mess.receiver.name}} {{mess.receiver.lastname}}</h5>
+            <p>
+              <span class="badge badge-pill badge-secondary">{{mess.date|date}}</span>{{mess.corps}}</p>
+            
+
+           
+
+
+
+
+
+          </div>
+
+        </div>
+      </li>
+    </div>
+
+
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- /.container -->
